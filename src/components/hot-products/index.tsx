@@ -8,12 +8,11 @@ const HotProducts = () => {
       <h1 className="text-2xl font-bold mb-4">Sản Phẩm Nổi Bật</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {dataHotProducts.map((item: IHotProduct, index: number) => (
-          
-          <ProductCard key={index} item={item} />
+          <ProductCard key={index} item={item} isHot={true}/>
         ))}
       </div>
     </div>
-      );
+  );
 };
 
 export default HotProducts;

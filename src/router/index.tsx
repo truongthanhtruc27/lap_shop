@@ -1,21 +1,22 @@
-import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/home";
-import Contact from "../pages/contact";
-import Layout from "../layout";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/Home';
+import Products from './pages/Products';
 
-export const router = createBrowserRouter([
-   
-    {
-        path: "/",
-        element: <Layout />,
-        children : [
-    {
+
+const router = createBrowserRouter([
+  {
         path: "/",
         element: <Home />
-    }, {
-        path: "/contact",
-        element: <Contact/>
-    }
-    ]
-    }
+      },
+      {
+        path: "/products",
+        element: <Products />
+      },
+    
+  
 ]);
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(<RouterProvider router={router} />);
