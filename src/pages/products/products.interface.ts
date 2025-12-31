@@ -1,22 +1,27 @@
 import { CheckboxOptionType } from "antd";
+import { IProduct } from "../../components/home-type-products/homeTypeProducts.interface"; 
 
+export interface Props {
+  item: IProduct;
+}
 export const categories = [
-  { id: "all", name: "Tất cả" },
-  { id: "gaming", name: "Gaming" },
-  { id: "office", name: "Văn phòng" },
-  { id: "design", name: "Đồ họa" },
-  { id: "student", name: "Sinh viên" },
+  { id: "all", name: "Tất cả", value: "" },
+  { id: "gaming", name: "Gaming", value: "GAMING"},
+  { id: "office", name: "Văn phòng", value: "OFFICE"},
+  { id: "design", name: "Đồ họa", value: "DESIGN"},
+  { id: "student", name: "Sinh viên", value: "STUDENT"},
 ];
 
 export const brands: CheckboxOptionType<string>[] = [
-  { label: "Dell", value: "dell" },
-  { label: "HP", value: "hp" },
-  { label: "Lenovo", value: "lenovo" },
-  { label: "Asus", value: "asus" },
-  { label: "Acer", value: "acer" },
-  { label: "MSI", value: "msi" },
-  { label: "Apple", value: "apple" },
-  { label: "Gigabyte", value: "gigabyte" },
+  { label: "Dell", value: "Dell" },
+  { label: "HP", value: "Hp" },
+  { label: "Lenovo", value: "Lenovo" },
+  { label: "Asus", value: "ASUS" },
+  { label: "Acer", value: "Acer" },
+  { label: "MSI", value: "MSI" },
+  { label: "Apple", value: "Apple" },
+  { label: "Gigabyte", value: "Gigabyte" },
+  { label: "Windown", value: "Windown" },
 ];
 
 export const configuration = [
@@ -72,19 +77,23 @@ export const ram = [
     label: "Tất cả",
   },
   {
-    value: "8gb",
+    value: "8GB",
     label: "8GB",
   },
   {
-    value: "16gb",
+    value: "12GB",
+    label: "12GB",
+  },
+  {
+    value: "16GB",
     label: "16GB",
   },
   {
-    value: "24gb",
+    value: "24GB",
     label: "24GB",
   },
   {
-    value: "32gb",
+    value: "32GB",
     label: "32GB",
   },
 ];
@@ -122,19 +131,19 @@ export const storage = [
     label: "Tất cả",
   },
   {
-    value: "256gb",
+    value: "256GB",
     label: "SSD 256GB",
   },
   {
-    value: "512gb",
+    value: "512GB",
     label: "SSD 512GB",
   },
   {
-    value: "1tb",
+    value: "1TB",
     label: "SSD 1TB",
   },
   {
-    value: "2tb",
+    value: "2TB",
     label: "SSD 2TB",
   },
 ];
